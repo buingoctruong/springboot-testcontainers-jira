@@ -1,0 +1,27 @@
+server:
+  compression:
+    enabled: true
+  # Default port
+  port: 1010
+  # Enable graceful shutdown - Server will wait for active request to finish
+  shutdown: graceful
+  tomcat:
+    mbeanregistry:
+      enabled: true
+# Spring Configuration
+spring:
+  application:
+    name: jira-testcontainers
+# Swagger
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+# Jira Configuration
+jira:
+  config:
+    # URL connection to Jira
+    jira-url: http://localhost:8080
+    username: admin
+    password: password
